@@ -3,7 +3,7 @@
 	"package": "dev.power.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-
+		"MendingEnchantmentMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
