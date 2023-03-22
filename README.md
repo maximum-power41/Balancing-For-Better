@@ -10,4 +10,4 @@ A Fabric mod for Minecraft that attempts to rebalance the game to be more enjoya
 * Make lingering potions made with bottles of honey instead of dragon's breath.
 * Make villager trades stay the same per villeger profession instance. (No more rerolling a villager's trades by breaking their "job site" block.)
 
-*Note: Raodmap is subject to change.*
+*Note: Roadmap is subject to change.*
