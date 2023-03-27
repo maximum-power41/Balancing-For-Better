@@ -6,9 +6,9 @@ import net.minecraft.enchantment.Enchantments;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class BalancedMinecraft implements ModInitializer {
+public class BalancingForBetter implements ModInitializer {
 
-    public static final String MOD_ID = "balanced-minecraft";
+    public static final String MOD_ID = "balancing_for_better";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
     @Override
