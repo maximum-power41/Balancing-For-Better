@@ -18,12 +18,8 @@
 		"main": [
 			"dev.power.BalancedMinecraft"
 		],
-		"client": [
-			"dev.power.BalancedMinecraftClient"
-		],
-		"fabric-datagen": [
-			"dev.power.BalancedMinecraftDataGenerator"
-		]
+		"client": [],
+		"fabric-datagen": []
 	},
 	"mixins": [
 		"balanced-minecraft.mixins.json",
