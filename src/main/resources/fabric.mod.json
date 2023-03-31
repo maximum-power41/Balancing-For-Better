@@ -1,34 +1,30 @@
 {
 	"schemaVersion": 1,
-	"id": "balanced-minecraft",
+	"id": "balancing-for-better",
 	"version": "${version}",
-	"name": "balanced minecraft",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "Balancing For Better",
+	"description": "A Fabric mod for Minecraft that attempts to balance the game to be more enjoyable.",
 	"authors": [
-		"Me!"
+		"maximum_power41"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT License",
 	"icon": "assets/balanced-minecraft/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"dev.power.BalancedMinecraft"
+			"dev.power.BalancingForBetter"
 		],
-		"client": [
-			"dev.power.BalancedMinecraftClient"
-		],
-		"fabric-datagen": [
-			"dev.power.BalancedMinecraftDataGenerator"
-		]
+		"client": [],
+		"fabric-datagen": []
 	},
 	"mixins": [
-		"balanced-minecraft.mixins.json",
+		"balancing-for-better.mixins.json",
 		{
-			"config": "balanced-minecraft.client.mixins.json",
+			"config": "balancing-for-better.client.mixins.json",
 			"environment": "client"
 		}
 	],
