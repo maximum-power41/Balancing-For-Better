@@ -15,6 +15,6 @@ public abstract class EnchantBookFactoryMixin {
     @ModifyVariable(method = "create", at = @At("STORE"))
     public List<Enchantment> modifyEnchantmentOffers(List<Enchantment> enchantmentList) {
 
-        return VillagerTradeEvents.MODIFY_ENCHANTMENT_TRADE_LIST.invoker().OnRetrieveTradeList(enchantmentList);
+        return VillagerTradeEvents.MODIFY_AVAILABLE_ENCHANTMENTS_LIST.invoker().onGetAvailableEnchantments(enchantmentList);
     }
 }

@@ -19,7 +19,7 @@ public class BalancingForBetter implements ModInitializer {
 
     private void registerEvents() {
         LOGGER.info("Registering Events");
-        VillagerTradeEvents.MODIFY_ENCHANTMENT_TRADE_LIST.register((enchantmentList) -> enchantmentList.stream().filter(enchantment -> !enchantment.equals(Enchantments.MENDING)).toList());
+        VillagerTradeEvents.MODIFY_AVAILABLE_ENCHANTMENTS_LIST.register((enchantmentList) -> enchantmentList.stream().filter(enchantment -> !enchantment.equals(Enchantments.MENDING)).toList());
         LOGGER.info("Finished Registering Events");
     }
 }
