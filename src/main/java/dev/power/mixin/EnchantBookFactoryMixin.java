@@ -1,6 +1,6 @@
 package dev.power.mixin;
 
-import dev.power.events.TradeOfferEvents;
+import dev.power.events.VillagerTradeEvents;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.village.TradeOffers;
 import org.spongepowered.asm.mixin.Mixin;
@@ -15,6 +15,6 @@ public abstract class EnchantBookFactoryMixin {
     @ModifyVariable(method = "create", at = @At("STORE"))
     public List<Enchantment> modifyEnchantmentOffers(List<Enchantment> enchantmentList) {
 
-        return TradeOfferEvents.MODIFY_ENCHANTMENT_TRADE_LIST.invoker().OnRetrieveTradeList(enchantmentList);
+        return VillagerTradeEvents.MODIFY_ENCHANTMENT_TRADE_LIST.invoker().OnRetrieveTradeList(enchantmentList);
     }
 }

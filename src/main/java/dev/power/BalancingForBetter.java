@@ -1,6 +1,6 @@
 package dev.power;
 
-import dev.power.events.TradeOfferEvents;
+import dev.power.events.VillagerTradeEvents;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.enchantment.Enchantments;
 import org.slf4j.Logger;
@@ -19,7 +19,7 @@ public class BalancingForBetter implements ModInitializer {
 
     private void registerEvents() {
         LOGGER.info("Registering Events");
-        TradeOfferEvents.MODIFY_ENCHANTMENT_TRADE_LIST.register((enchantmentList) -> enchantmentList.stream().filter(enchantment -> !enchantment.equals(Enchantments.MENDING)).toList());
+        VillagerTradeEvents.MODIFY_ENCHANTMENT_TRADE_LIST.register((enchantmentList) -> enchantmentList.stream().filter(enchantment -> !enchantment.equals(Enchantments.MENDING)).toList());
         LOGGER.info("Finished Registering Events");
     }
 }
