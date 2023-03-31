@@ -7,6 +7,7 @@ import net.minecraft.village.TradeOffer;
 import net.minecraft.village.TradeOfferList;
 import net.minecraft.village.TradeOffers;
 import net.minecraft.village.VillagerData;
+import org.jetbrains.annotations.NotNull;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -26,7 +27,7 @@ public abstract class VillagerEntityMixin {
     }
 
     @ModifyArgs(method = "fillRecipes", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/passive/VillagerEntity;fillRecipesFromPool(Lnet/minecraft/village/TradeOfferList;[Lnet/minecraft/village/TradeOffers$Factory;I)V"))
-    private void modifyFillRecipesFromPoolParameters(Args args) {
+    private void modifyFillRecipesFromPoolParameters(@NotNull Args args) {
         TradeOfferList currentOffers = args.get(0);
         TradeOffers.Factory[] newOffers = args.get(1);
         int count = args.get(2);
