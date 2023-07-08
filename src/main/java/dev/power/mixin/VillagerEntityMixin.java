@@ -33,6 +33,6 @@ public abstract class VillagerEntityMixin {
         int count = args.get(2);
         VillagerData villagerData = this.villagerData;
 
-        args.set(1, VillagerTradeEvents.ADD_VILLAGER_TRADE_OFFERS.invoker().onAddingVillagerTradeOffers(currentOffers.toArray(new TradeOffer[0]), newOffers, count, villagerData));
+        VillagerTradeEvents.ADD_VILLAGER_TRADE_OFFERS.invoker().addVillagerTradeOffers(currentOffers.toArray(new TradeOffer[0]), newOffers.clone(), count, villagerData);
     }
 }
