@@ -8,8 +8,7 @@
 		"maximum_power41"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/maximum-power41/Balancing-For-Better"
 	},
 	"license": "MIT License",
 	"icon": "assets/balanced-minecraft/icon.png",
@@ -29,7 +28,7 @@
 		}
 	],
 	"depends": {
-		"fabricloader": ">=0.14.17",
+		"fabricloader": ">=0.14.21",
 		"minecraft": "~1.19.4",
 		"java": ">=17",
 		"fabric-api": "*"

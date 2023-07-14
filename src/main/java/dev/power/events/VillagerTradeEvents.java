@@ -18,9 +18,9 @@ public abstract class VillagerTradeEvents {
         return enchantmentList;
     });
 
-    public static final Event<AddVillagerTradeOffers> ADD_VILLAGER_TRADE_OFFERS = EventFactory.createArrayBacked(AddVillagerTradeOffers.class, callbacks -> (currentOffers, newOffers, count, villagerData) -> {
+    public static final Event<ModifyVillagerTradeOffers> MODIFY_VILLAGER_TRADE_OFFERS = EventFactory.createArrayBacked(ModifyVillagerTradeOffers.class, callbacks -> (currentOffers, newOffers, villagerData) -> {
 
-        for (AddVillagerTradeOffers callback : callbacks) callback.addVillagerTradeOffers(currentOffers, newOffers, count, villagerData);
+        for (ModifyVillagerTradeOffers callback : callbacks) callback.addVillagerTradeOffers(currentOffers, newOffers, villagerData);
 
     });
 
@@ -31,8 +31,8 @@ public abstract class VillagerTradeEvents {
     }
 
     @FunctionalInterface
-    public interface AddVillagerTradeOffers {
+    public interface ModifyVillagerTradeOffers {
 
-        void addVillagerTradeOffers(TradeOffer[] currentOffers, TradeOffers.Factory[] newOffers, final int count, final VillagerData villagerData);
+        void addVillagerTradeOffers(final TradeOffer[] currentOffers, TradeOffers.Factory[] newOffers, final VillagerData villagerData);
     }
 }
