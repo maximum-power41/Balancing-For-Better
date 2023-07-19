@@ -1,4 +1,8 @@
-# Balancing-For-Better v1.0.2
+# Balancing-For-Better
+_Latest version: v1.0.3_
+
+_Minecraft version: 1.20.1_
+
 A Fabric mod for Minecraft that attempts to balance the game to be more enjoyable.
 
 ### Current changes:
