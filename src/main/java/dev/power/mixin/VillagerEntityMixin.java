@@ -24,6 +24,6 @@ public abstract class VillagerEntityMixin {
         TradeOffers.Factory[] newOffers = args.get(1);
         VillagerData villagerData = this.getVillagerData();
 
-        VillagerTradeEvents.MODIFY_VILLAGER_TRADE_OFFERS.invoker().addVillagerTradeOffers(currentOffers.toArray(new TradeOffer[0]), newOffers, villagerData);
+        VillagerTradeEvents.MODIFY_VILLAGER_TRADE_OFFERS.invoker().modifyVillagerTradeOffers(currentOffers.toArray(new TradeOffer[0]), newOffers, villagerData);
     }
 }

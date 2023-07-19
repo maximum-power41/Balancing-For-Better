@@ -20,7 +20,7 @@ public abstract class VillagerTradeEvents {
 
     public static final Event<ModifyVillagerTradeOffers> MODIFY_VILLAGER_TRADE_OFFERS = EventFactory.createArrayBacked(ModifyVillagerTradeOffers.class, callbacks -> (currentOffers, newOffers, villagerData) -> {
 
-        for (ModifyVillagerTradeOffers callback : callbacks) callback.addVillagerTradeOffers(currentOffers, newOffers, villagerData);
+        for (ModifyVillagerTradeOffers callback : callbacks) callback.modifyVillagerTradeOffers(currentOffers, newOffers, villagerData);
 
     });
 
@@ -33,6 +33,6 @@ public abstract class VillagerTradeEvents {
     @FunctionalInterface
     public interface ModifyVillagerTradeOffers {
 
-        void addVillagerTradeOffers(final TradeOffer[] currentOffers, TradeOffers.Factory[] newOffers, final VillagerData villagerData);
+        void modifyVillagerTradeOffers(final TradeOffer[] currentOffers, TradeOffers.Factory[] newOffers, final VillagerData villagerData);
     }
 }
